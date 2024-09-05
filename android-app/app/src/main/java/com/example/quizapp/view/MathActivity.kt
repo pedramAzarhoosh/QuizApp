@@ -1,5 +1,6 @@
 package com.example.quizapp.view
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -77,6 +78,8 @@ class MathActivity : AppCompatActivity() {
 
                     if(i == it.size.minus(1)){
                         binding.nextBtn.text = "FINISH"
+                        val intent = Intent(this@MathActivity,ResultActivity::class.java)
+                        startActivity(intent)
                     }
 
                     binding.radioGroup.clearCheck()
